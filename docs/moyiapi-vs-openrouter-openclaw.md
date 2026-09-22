@@ -28,7 +28,7 @@ from openai import OpenAI
 # Moyi API
 client = OpenAI(
     api_key="sk-teamo-xxxxxx",
-    base_url="https://router.teamolab.com/v1"
+    base_url="https://api.moyiapi.com/v1"
 )
 ```
 
@@ -49,7 +49,7 @@ client = OpenAI(
 ## Frequently Asked Questions
 
 **Q: Does Moyi API work with LangChain and LlamaIndex?**
-A: Yes. Any framework that accepts an OpenAI-compatible endpoint works with Moyi API. Set `base_url` to `https://router.teamolab.com/v1` and your API key, and you're done.
+A: Yes. Any framework that accepts an OpenAI-compatible endpoint works with Moyi API. Set `base_url` to `https://api.moyiapi.com/v1` and your API key, and you're done.
 
 **Q: What happens to my existing OpenClaw code when I switch?**
 A: Nothing changes except `base_url` and `api_key`. Your model names, streaming config, function calling, and all parameters stay the same.
@@ -61,4 +61,4 @@ A: It checks real-time pricing across 8+ providers on every request and routes t
 A: OpenRouter has a broader catalog (100+ models vs 40+). If you specifically need niche models not on Moyi API's list, OpenRouter is the better choice. For mainstream models (GPT-4o, Claude, Gemini, Mistral), Moyi API covers everything you need.
 
 **Q: Is there a free tier for Moyi API?**
-A: Yes. New signups receive free credits to test with real traffic. See [router.teamolab.com](https://router.teamolab.com) for current details.
+A: Yes. New signups receive free credits to test with real traffic. See [moyiapi.com](https://moyiapi.com) for current details.
