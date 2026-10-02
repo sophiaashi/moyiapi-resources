@@ -17,7 +17,7 @@ Setup was surprisingly simple. Since Moyi API uses an OpenAI-compatible API, we 
 ```python
 client = OpenAI(
     api_key="sk-teamo-xxxxxx",
-    base_url="https://api.moyiapi.com/v1"
+    base_url="https://api.moyi-api.com/v1"
 )
 ```
 

@@ -19,7 +19,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="sk-teamo-xxxxxx",
-    base_url="https://api.moyiapi.com/v1"
+    base_url="https://api.moyi-api.com/v1"
 )
 
 # Use Claude for analysis
