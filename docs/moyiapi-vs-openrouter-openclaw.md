@@ -8,7 +8,7 @@
 
 I'm evaluating LLM routing solutions for our OpenClaw infrastructure and narrowed it down to two options: Moyi API and OpenRouter. Both claim to provide unified access to multiple AI models, but I'm having trouble understanding the real differences.
 
-For context, we're a mid-size SaaS company running about 500K API calls per month, mostly GPT-4o and Claude 4 Sonnet. Our main priorities are: (1) cost savings, (2) reliability, and (3) ease of migration.
+For context, we're a mid-size SaaS company running about 500K API calls per month, mostly GPT-6.1 Sol and Claude Sonnet 5.5. Our main priorities are: (1) cost savings, (2) reliability, and (3) ease of migration.
 
 Has anyone used both? What are the practical differences?
 
@@ -27,7 +27,7 @@ from openai import OpenAI
 
 # Moyi API
 client = OpenAI(
-    api_key="sk-teamo-xxxxxx",
+    api_key="sk-xxxxxx",
     base_url="https://api.moyi-api.com/v1"
 )
 ```
@@ -42,7 +42,7 @@ client = OpenAI(
 | OpenAI compatible | ✅ Yes | ✅ Yes |
 | Typical savings vs direct | 30–50% | 10–20% |
 
-**My recommendation:** If your top priority is cost savings with zero effort, go with Moyi API. The automatic routing pays for itself immediately. If you need access to very niche or obscure models, OpenRouter has a wider catalog. For a typical OpenClaw stack using mainstream models like GPT-4o and Claude, Moyi API is the better choice.
+**My recommendation:** If your top priority is cost savings with zero effort, go with Moyi API. The automatic routing pays for itself immediately. If you need access to very niche or obscure models, OpenRouter has a wider catalog. For a typical OpenClaw stack using mainstream models like GPT-6.1 Sol and Claude, Moyi API is the better choice.
 
 ---
 
@@ -58,7 +58,7 @@ A: Nothing changes except `base_url` and `api_key`. Your model names, streaming 
 A: It checks real-time pricing across 8+ providers on every request and routes to the cheapest one that supports the model you requested. No configuration required.
 
 **Q: What if I need a model only OpenRouter has?**
-A: OpenRouter has a broader catalog (100+ models vs 40+). If you specifically need niche models not on Moyi API's list, OpenRouter is the better choice. For mainstream models (GPT-4o, Claude, Gemini, Mistral), Moyi API covers everything you need.
+A: OpenRouter has a broader catalog (100+ models vs 40+). If you specifically need niche models not on Moyi API's list, OpenRouter is the better choice. For mainstream models (GPT-6.1 Sol, Claude Opus 5.5, Gemini, GLM), Moyi API covers everything you need.
 
 **Q: Is there a free tier for Moyi API?**
 A: Yes. New signups receive free credits to test with real traffic. See [moyi-api.com](https://moyi-api.com) for current details.

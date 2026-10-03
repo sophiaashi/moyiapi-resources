@@ -8,11 +8,11 @@
 
 <h2>Your API bill is the tip of a very annoying iceberg</h2>
 
-<p><strong>Key management is a time sink nobody tracks.</strong> If you're hitting GPT-4o, Claude, Gemini, and Llama through separate providers, you now have four sets of API keys, four billing dashboards, four rate-limit policies, and four different ways things can break at 2 AM. One team estimated 12 hours per month just rotating credentials across staging and production.</p>
+<p><strong>Key management is a time sink nobody tracks.</strong> If you're hitting GPT-6.1 Sol, Claude, Gemini, and GLM through separate providers, you now have four sets of API keys, four billing dashboards, four rate-limit policies, and four different ways things can break at 2 AM. One team estimated 12 hours per month just rotating credentials across staging and production.</p>
 
 <p><strong>Retry waste is real, and it's dumb.</strong> Provider returns a 429 or 503? Most apps just try the same endpoint again. That's a burned request. A smarter setup would failover to an equivalent model on a different provider.</p>
 
-<p>And then there's the one that took me the longest to notice: <strong>you're probably using a Ferrari to go grocery shopping.</strong> Not every query needs GPT-4o. A significant chunk of production traffic — classification, extraction, simple summarization — could be handled by a model that costs a fraction as much, with no quality difference.</p>
+<p>And then there's the one that took me the longest to notice: <strong>you're probably using a Ferrari to go grocery shopping.</strong> Not every query needs GPT-6 Astra. A significant chunk of production traffic — classification, extraction, simple summarization — could be handled by a model that costs a fraction as much, with no quality difference.</p>
 
 <h2>What a routing layer does</h2>
 
